@@ -1,0 +1,61 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sequelize SQLite3 Example</title>
+    <meta name="description" content="Sequelize SQLite3 Example">
+    <link id="favicon" rel="icon" href="https://glitch.com/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/normalize.css">
+  </head>
+  <style>
+    .hidden{
+      display: none;
+    }
+  </style>
+  <body>
+    <header>
+      <h1>
+        Welcome
+      </h1>
+    </header>
+
+    <main>
+      <p>Login</p>
+      <form action = "/login" method = "post">
+        <input id="user" name = "username" type="text" maxlength="100" placeholder="Username"> <input id="pass" name = "password" type="password" maxlength="100" placeholder="Password">
+        <button type="submit">Submit</button>
+      </form>
+      <p></p>
+      <button onclick = "newUser()">
+        Create an account
+      </button>
+    </main>
+    
+    <div id = "creation" class = "hidden">
+      <form action = "/createUser" method = "post">
+        <input id="newuser" type="text" name = "newUsername" maxlength="100" placeholder="New Username">
+        <input id="newpass" type="password" name = "newPassword" maxlength="100" placeholder="New Password">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <script src="https://button.glitch.me/button.js" data-style="glitch"></script>
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script>
+    function newUser() {
+  var x = document.getElementById("creation");
+    x.style.display = "block";
+}
+    </script>
+
+  </body>
+</html>

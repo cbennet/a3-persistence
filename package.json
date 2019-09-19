@@ -1,0 +1,22 @@
+{
+  "name": "persistance",
+  "version": "1.0.0",
+  "description": "Project 3 for webware",
+  "author": "Cooper Bennet",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-favicon": "^2.0.1",
+    "express-session": "^1.16.2",
+    "mime": "^2.4.4",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "sqlite3": "*",
+    "sequelize": "*"
+  },
+  "engines": {
+    "node": "8.x"
+  }
+}
